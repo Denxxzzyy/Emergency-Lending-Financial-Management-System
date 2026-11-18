@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emergency Lending Corporation — Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="login" class="login-screen">
+    <section class="login-brand">
+      <div class="brand-mark">EL</div>
+      <div>
+        <p class="eyebrow">CAPSTONE PROTOTYPE</p>
+        <h1>Clarity for every peso, from release to return.</h1>
+        <p class="lead">A proposed web-based loan and financial management system for an emergency lending corporation.</p>
+      </div>
+      <div class="scope-note"><strong>Demonstration only.</strong> Fictional Philippine peso data. No real payments, loan decisions, certified audits, or BIR compliance claims.</div>
+    </section>
+    <section class="login-panel">
+      <div class="login-card">
+        <span class="kicker">Interactive walkthrough</span>
+        <h2>Choose a demo role</h2>
+        <p>Each role sees only the records assigned to that account.</p>
+        <button class="role-card" data-login="manager"><span class="role-icon">M</span><span><b>Manager</b><small>Operations, collections, payouts, expenses & reports</small></span><i>→</i></button>
+        <button class="role-card" data-login="borrower"><span class="role-icon blue">B</span><span><b>Borrower</b><small>Own balance, schedule, penalties & payment history</small></span><i>→</i></button>
+        <button class="role-card" data-login="financier"><span class="role-icon gold">F</span><span><b>Financier</b><small>Own contribution, agreement returns & payouts</small></span><i>→</i></button>
+        <p class="login-hint">No password is required for this presentation prototype.</p>
+      </div>
+    </section>
+  </div>
+
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand"><div class="brand-mark small">EL</div><div><b>Emergency Lending</b><span>Financial Management</span></div></div>
+      <nav id="nav"></nav>
+      <div class="sidebar-footer"><span class="live-dot"></span> Prototype mode<br><small>Local fictional records</small></div>
+    </aside>
+    <main>
+      <header class="topbar">
+        <button id="menuBtn" class="icon-btn menu-btn" aria-label="Toggle menu">☰</button>
+        <div><p id="breadcrumb">Workspace / Overview</p><h2 id="pageTitle">Dashboard</h2></div>
+        <div class="top-actions"><span class="demo-badge">SIMULATED DATA</span><button id="roleSwitch" class="profile"><span id="profileInitial">M</span><span><b id="profileName">Mara Santos</b><small id="profileRole">Manager</small></span>⌄</button></div>
+      </header>
+      <div id="content" class="content"></div>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden"><div class="modal-card"><button class="modal-close" data-close>×</button><div id="modalBody"></div></div></div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
